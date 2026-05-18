@@ -1,3 +1,21 @@
+## [1.0.0] - 2026-05-18
+
+### Changed
+- 🎉 **BREAKING:** Rebranded from Customer.io to Zixflow
+- Package name changed from `customer_io` to `zixflow`
+- Public API now uses `Zixflow` class name (type alias to `CustomerIO`)
+- API endpoint updated to `api-events.zixflow.com/v1`
+- Native dependencies updated to Zixflow iOS SDK v1.0.0 and Android SDK v1.0.0
+- Repository moved to https://github.com/zixflow/zixflow-flutter
+- Documentation moved to https://zixflow.com/docs/sdk/flutter/
+
+### Migration Guide
+See README.md for migration instructions from customer_io package.
+
+---
+
+## Previous Customer.io Releases
+
 ## [4.0.1](https://github.com/customerio/customerio-flutter/compare/4.0.0...4.0.1) (2026-04-24)
 
 ### Bug Fixes

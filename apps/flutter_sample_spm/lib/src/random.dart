@@ -21,7 +21,7 @@ class RandomValues {
       result += _emailUsernameWhitelistChars[random.nextInt(charsLength)];
     }
 
-    return "$result@customer.io";
+    return "$result@zixflow.com";
   }
 
   MapEntry<String, Map<String, Object>?> trackingEvent() {

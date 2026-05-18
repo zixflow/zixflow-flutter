@@ -1,5 +1,5 @@
 import 'extensions.dart';
-import 'package:customer_io/customer_io_plugin_version.dart'
+import 'package:zixflow/customer_io_plugin_version.dart'
     as customer_io_plugin_version;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:package_info_plus/package_info_plus.dart';

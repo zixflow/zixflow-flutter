@@ -1,8 +1,8 @@
-import 'package:customer_io/config/customer_io_config.dart';
-import 'package:customer_io/config/in_app_config.dart';
-import 'package:customer_io/config/push_config.dart';
-import 'package:customer_io/customer_io_enums.dart';
-import 'package:customer_io/customer_io_plugin_version.dart' as plugin_info;
+import 'package:zixflow/config/customer_io_config.dart';
+import 'package:zixflow/config/in_app_config.dart';
+import 'package:zixflow/config/push_config.dart';
+import 'package:zixflow/customer_io_enums.dart';
+import 'package:zixflow/customer_io_plugin_version.dart' as plugin_info;
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

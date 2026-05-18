@@ -1,4 +1,4 @@
-import 'package:customer_io/customer_io_enums.dart';
+import '../customer_io_enums.dart';
 
 class PushConfig {
   PushConfigAndroid pushConfigAndroid;

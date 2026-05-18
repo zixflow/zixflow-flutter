@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:customer_io/customer_io.dart';
-import 'package:customer_io/customer_io_inapp.dart';
+import 'package:zixflow/zixflow.dart';
+import 'package:zixflow/customer_io_inapp.dart' as inapp;
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -11,7 +11,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import '../auth.dart';
 import '../components/container.dart';
 import '../components/scroll_view.dart';
-import '../customer_io.dart';
+import '../zixflow.dart';
 import '../data/screen.dart';
 import '../random.dart';
 import '../theme/sizes.dart';
@@ -87,21 +87,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
     super.initState();
   }
 
-  void handleInAppEvent(InAppEvent event) {
+  void handleInAppEvent(inapp.InAppEvent event) {
     switch (event.eventType) {
-      case EventType.messageShown:
+      case inapp.EventType.messageShown:
         trackInAppEvent('message_shown', event.message);
         debugLog("messageShown: ${event.message}");
         break;
-      case EventType.messageDismissed:
+      case inapp.EventType.messageDismissed:
         trackInAppEvent('message_dismissed', event.message);
         debugLog("messageDismissed: ${event.message}");
         break;
-      case EventType.errorWithMessage:
+      case inapp.EventType.errorWithMessage:
         trackInAppEvent('errorWithMessage', event.message);
         debugLog("errorWithMessage: ${event.message}");
         break;
-      case EventType.messageActionTaken:
+      case inapp.EventType.messageActionTaken:
         trackInAppEvent('messageActionTaken', event.message, arguments: {
           'actionName': event.actionName,
           'actionValue': event.actionValue,
@@ -111,7 +111,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     }
   }
 
-  void trackInAppEvent(String eventName, InAppMessage message,
+  void trackInAppEvent(String eventName, inapp.InAppMessage message,
       {Map<String, dynamic> arguments = const {}}) {
     Map<String, dynamic> attributes = {
       'event_name': eventName,

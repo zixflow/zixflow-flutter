@@ -606,4 +606,12 @@ MigrationBackup/
 # Remove test coverage
 .coverage/
 
+# Internal documentation (not for public repo)
+MANUAL_TESTING.md
+PUB_DEV_SETUP.md
+RELEASE.md
+CLAUDE.md
+CHANGELOG.md
+GETTING_STARTED.md
+
 # End of https://www.gitignore.io/api/git,dart,flutter,intellij,webstorm,visualstudio

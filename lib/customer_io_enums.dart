@@ -2,10 +2,21 @@
 /// Logs can be viewed in Xcode or Android studio.
 enum CioLogLevel { none, error, info, debug }
 
-/// Use this enum to specify the region your customer.io workspace is present in.
+/// Use this enum to specify the region your Zixflow workspace is present in.
 /// US - for data center in United States
 /// EU - for data center in European Union
-enum Region { us, eu }
+///
+/// Note: Zixflow uses a global endpoint, so both regions point to the same API host.
+enum Region {
+  us,
+  eu;
+
+  /// Get API host for the region - Zixflow uses global endpoint
+  String get apiHost => 'api-events.zixflow.com/v1';
+
+  /// Get CDN host for the region - Zixflow uses global endpoint
+  String get cdnHost => 'api-events.zixflow.com/v1';
+}
 
 /// Enum to specify the type of metric for tracking
 enum MetricEvent { delivered, opened, converted }

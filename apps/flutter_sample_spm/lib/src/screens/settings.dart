@@ -1,13 +1,13 @@
-import 'package:customer_io/config/in_app_config.dart';
-import 'package:customer_io/customer_io.dart';
-import 'package:customer_io/customer_io_enums.dart';
+import 'package:zixflow/config/in_app_config.dart';
+import 'package:zixflow/zixflow.dart';
+import 'package:zixflow/customer_io_enums.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../auth.dart';
 import '../components/container.dart';
-import '../customer_io.dart';
+import '../zixflow.dart';
 import '../data/config.dart';
 import '../data/screen.dart';
 import '../theme/sizes.dart';
@@ -206,23 +206,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           TextSettingsFormField(
                             labelText: 'API Host',
                             semanticsLabel: 'API Host Input',
-                            hintText: 'cdp.customer.io/v1',
+                            hintText: 'api-events.zixflow.com/v1',
                             valueController: _apiHostValueController,
                             validator: (value) => value?.isEmptyOrValidUrl() !=
                                     false
                                 ? null
-                                : 'Please enter url e.g. cdp.customer.io/v1 (without https)',
+                                : 'Please enter url e.g. api-events.zixflow.com/v1 (without https)',
                           ),
                           const SizedBox(height: 16),
                           TextSettingsFormField(
                             labelText: 'CDN Host',
                             semanticsLabel: 'CDN Host Input',
-                            hintText: 'cdp.customer.io/v1',
+                            hintText: 'api-events.zixflow.com/v1',
                             valueController: _cdnHostValueController,
                             validator: (value) => value?.isEmptyOrValidUrl() !=
                                     false
                                 ? null
-                                : 'Please enter url e.g. cdp.customer.io/v1 (without https)',
+                                : 'Please enter url e.g. api-events.zixflow.com/v1 (without https)',
                           ),
                           const SizedBox(height: 32),
                           TextSettingsFormField(

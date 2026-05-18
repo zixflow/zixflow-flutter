@@ -1,9 +1,9 @@
 import 'dart:async' show Future;
 
 import 'utils/build_info.dart';
-import 'package:customer_io/customer_io.dart';
-import 'package:customer_io/customer_io_config.dart';
-import 'package:customer_io/customer_io_enums.dart';
+import 'package:zixflow/zixflow.dart';
+import 'package:zixflow/customer_io_config.dart';
+import 'package:zixflow/customer_io_enums.dart';
 import 'package:flutter/services.dart' show PlatformException;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';

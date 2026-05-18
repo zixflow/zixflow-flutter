@@ -5,8 +5,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i2;
 
-import 'package:customer_io/customer_io_config.dart' as _i4;
-import 'package:customer_io/customer_io_enums.dart' as _i5;
+import 'package:zixflow/customer_io_config.dart' as _i4;
+import 'package:zixflow/customer_io_enums.dart' as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 
 import 'customer_io_test.dart' as _i3;

@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:customer_io/customer_io.dart';
-import 'package:customer_io/messaging_in_app.dart';
+import 'package:zixflow/zixflow.dart';
+import 'package:zixflow/messaging_in_app.dart';
 import 'package:flutter/material.dart';
 
 import '../components/container.dart';

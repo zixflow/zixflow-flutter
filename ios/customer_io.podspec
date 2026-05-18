@@ -15,15 +15,15 @@ Pod::Spec.new do |s|
   s.summary     = podspec_config['description']
   s.homepage    = podspec_config['homepage']
   s.license     = { :file => '../LICENSE' }
-  s.author      = { "CustomerIO Team" => "win@customer.io" }
+  s.author      = { "Zixflow Team" => "apps@zixflow.com" }
   s.source      = { :path => '.' }
   s.source_files = 'customer_io/Sources/customer_io/**/*.swift'
   s.dependency 'Flutter'
   s.platform = :ios, '13.0'
 
   # Native SDK dependencies that are required for the Flutter plugin to work.
-  s.dependency "CustomerIO/DataPipelines", native_sdk_version
-  s.dependency "CustomerIO/MessagingInApp", native_sdk_version
+  s.dependency "Zixflow/DataPipelines", "1.0.0"
+  s.dependency "Zixflow/MessagingInApp", "1.0.0"
 
   # If we do not specify a default_subspec, then *all* dependencies inside of *all* the subspecs will be downloaded by cocoapods.
   # We want customers to opt into push dependencies especially because the FCM subpsec downloads Firebase dependencies.
@@ -33,18 +33,17 @@ Pod::Spec.new do |s|
   s.subspec 'nopush' do |ss|
     # This is the default subspec designed to not install any push dependencies. Customer should choose APN or FCM.
     # The SDK at runtime currently requires the MessagingPush module so we do include it here.
-    ss.dependency "CustomerIO/MessagingPush", native_sdk_version
+    ss.dependency "Zixflow/MessagingPush", "1.0.0"
   end
 
   # Note: Subspecs inherit all dependencies specified the parent spec (this file).
   s.subspec 'fcm' do |ss|
-    ss.dependency "CustomerIO/MessagingPushFCM", native_sdk_version
-    ss.dependency "CioFirebaseWrapper", firebase_wrapper_version
+    ss.dependency "ZixflowMessagingPushFCM", "1.0.0"
   end
 
   # Location module is optional - customers must opt in by adding this subspec.
   s.subspec 'location' do |ss|
-    ss.dependency "CustomerIO/Location", native_sdk_version
+    ss.dependency "ZixflowLocation", "1.0.0"
   end
 
   # Flutter.framework does not contain a i386 slice.

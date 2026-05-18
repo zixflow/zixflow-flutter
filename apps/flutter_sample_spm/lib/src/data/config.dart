@@ -1,6 +1,6 @@
-import 'package:customer_io/config/in_app_config.dart';
-import 'package:customer_io/config/push_config.dart';
-import 'package:customer_io/customer_io_enums.dart';
+import 'package:zixflow/config/in_app_config.dart';
+import 'package:zixflow/config/push_config.dart';
+import 'package:zixflow/customer_io_enums.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,6 +1,6 @@
-import 'package:customer_io/customer_io_config.dart';
-import 'package:customer_io/customer_io_enums.dart';
-import 'package:customer_io/data_pipelines/customer_io_method_channel.dart';
+import 'package:zixflow/customer_io_config.dart';
+import 'package:zixflow/customer_io_enums.dart';
+import 'package:zixflow/data_pipelines/customer_io_method_channel.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.summary     = podspec_config['description']
   s.homepage    = podspec_config['homepage']
   s.license     = { :file => '../LICENSE' }
-  s.author      = { "CustomerIO Team" => "win@customer.io" }
+  s.author      = { "Zixflow Team" => "apps@zixflow.com" }
   s.source      = { :path => '.' }
   s.source_files = 'customer_io/Sources/customer_io/**/*'
   s.dependency 'Flutter'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   # Subspecs allow customers to choose between multiple options of what type of version of this rich push package they would like to install.
   s.subspec 'fcm' do |ss|
-    ss.dependency "CustomerIO/MessagingPushFCM", native_sdk_version
+    ss.dependency "ZixflowMessagingPushFCM", "1.0.0"
   end
 
   # Flutter.framework does not contain a i386 slice.

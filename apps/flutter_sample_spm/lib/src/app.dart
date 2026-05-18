@@ -1,11 +1,11 @@
-import 'package:customer_io/customer_io.dart';
+import 'package:zixflow/zixflow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import 'auth.dart';
 import 'color_schemes.g.dart';
-import 'customer_io.dart';
+import 'zixflow.dart';
 import 'data/screen.dart';
 import 'screens/attributes.dart';
 import 'screens/dashboard.dart';

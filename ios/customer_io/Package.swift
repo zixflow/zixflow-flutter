@@ -76,14 +76,13 @@ let useLocation: Bool = {
 }()
 
 var targetDependencies: [Target.Dependency] = [
-    .product(name: "DataPipelines", package: "customerio-ios"),
-    .product(name: "MessagingInApp", package: "customerio-ios"),
-    .product(name: "MessagingPushFCM", package: "customerio-ios"),
-    .product(name: "CioFirebaseWrapper", package: "customerio-ios-fcm")
+    .product(name: "CioDataPipelines", package: "zixflow-ios"),
+    .product(name: "CioMessagingInApp", package: "zixflow-ios"),
+    .product(name: "CioMessagingPushFCM", package: "zixflow-ios-fcm")
 ]
 
 if useLocation {
-    targetDependencies.append(.product(name: "Location", package: "customerio-ios"))
+    targetDependencies.append(.product(name: "CioLocation", package: "zixflow-ios"))
 }
 
 let package = Package(
@@ -95,8 +94,8 @@ let package = Package(
         .library(name: "customer-io", targets: ["customer_io"])
     ],
     dependencies: [
-        .package(url: "https://github.com/customerio/customerio-ios.git", exact: "4.4.1"),
-        .package(url: "https://github.com/customerio/customerio-ios-fcm.git", from: "1.0.0")
+        .package(url: "https://github.com/zixflow/zixflow-ios.git", exact: "1.0.0"),
+        .package(url: "https://github.com/zixflow/zixflow-ios-fcm.git", from: "1.0.0")
     ],
     targets: [
         .target(

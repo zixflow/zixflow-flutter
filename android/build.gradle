@@ -1,5 +1,5 @@
 group 'io.customer.customer_io'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 buildscript {
     ext.kotlin_version = '2.1.21'
@@ -66,17 +66,17 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    // Customer.io SDK
-    def cioVersion = "4.17.0"
-    implementation "io.customer.android:datapipelines:$cioVersion"
-    implementation "io.customer.android:messaging-push-fcm:$cioVersion"
-    implementation "io.customer.android:messaging-in-app:$cioVersion"
+    // Zixflow SDK
+    def zixflowVersion = "1.0.0"
+    implementation "com.zixflow.com.android:datapipelines:$zixflowVersion"
+    implementation "com.zixflow.com.android:messaging-push-fcm:$zixflowVersion"
+    implementation "com.zixflow.com.android:messaging-in-app:$zixflowVersion"
     // Location module is optional - customers enable it by adding
     // customerio_location_enabled=true in their gradle.properties
     if (cioLocationEnabled) {
-        implementation "io.customer.android:location:$cioVersion"
+        implementation "com.zixflow.com.android:location:$zixflowVersion"
     } else {
-        compileOnly "io.customer.android:location:$cioVersion"
+        compileOnly "com.zixflow.com.android:location:$zixflowVersion"
     }
     
     testImplementation 'junit:junit:4.13.2'
